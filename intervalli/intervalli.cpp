@@ -10,9 +10,9 @@ using namespace std;
 vector < pair <int,int> > intervals;
 
 int main(){
+	
 	int n,a,b;
 	
-
 	ifstream in("input.txt");
 	in>>n;
 	//intervals.resize(n);	
