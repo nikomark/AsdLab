@@ -28,24 +28,25 @@ int main(){
 
 	}*/
 
-	int intstart=-1,intend=-1;
+	int interstart=-1,interend=-1;
 	int m=intervals[0].second;
+
 	for(int i=1; i<n; i++)
 	{
-		if(intervals[i].first-m>intend-intstart)
+		if(intervals[i].first-m>interend-interstart)
 		{
-			intstart=m;
-			intend=intervals[i].first;
+			interstart=m;
+			interend=intervals[i].first;
 		}
 		m=max(m, intervals[i].second);
 	}
 
 	ofstream out("output.txt");
 
-	if (intstart==-1)
+	if (interstart==-1)
 		out<<0<<endl;
 	else
-		out <<intstart<<" "<<intend<<endl;
+		out <<interstart<<" "<<interend<<endl;
 
 	return 0;
 }
